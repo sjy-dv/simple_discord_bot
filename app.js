@@ -5,7 +5,6 @@ const { BOT_TOKEN, YOUTUBE_API_KEY } = process.env;
 const ytdl = require("ytdl-core");
 const Youtube = require("youtube-node");
 const youtube = new Youtube();
-const dialog = require("./dialog");
 const {
   explain,
   new_log,
@@ -17,7 +16,11 @@ const {
 
 youtube.setKey(YOUTUBE_API_KEY);
 
-client.on("ready", () => {
+const deepbot = require("./NLP");
+
+client.on("ready", async () => {
+  //dialog.Init();
+  deepbot.Init();
   console.log(`Logged in as ${client.user.tag}`);
 });
 
@@ -102,11 +105,16 @@ client.on("message", async (msg) => {
 
     if (msg.content.startsWith("?")) {
       let user_msg = msg.content.replace("?", "");
-      let reply = await dialog.reply(user_msg);
-      msg.reply(reply);
+      let reply = await deepbot.Response(user_msg);
+      console.log(reply);
+      if (reply.answers.length === 0) return msg.reply("아직 모르는 말이야");
+      return msg.reply(reply.answers[0].answer);
     }
   } catch (error) {
     console.log(error);
+  }
+  if (msg.content.startsWith("!김현지")) {
+    await msg.channel.send("부정적인 사람이네요.");
   }
 });
 

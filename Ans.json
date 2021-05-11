@@ -1,0 +1,67 @@
+[
+    {
+        "text" : "안녕하세요.",
+        "intent" : "greetings.hello"
+    },
+    {
+        "text" : "안녕",
+        "intent" : "greetings.hello"
+    },
+    {
+        "text" : "하이루",
+        "intent" : "greetings.hello"
+    },
+    {
+        "text" : "그래 안녕",
+        "intent" : "greetings.hello"
+    },
+    {
+        "text" : "나도 방가",
+        "intent" : "greetings.hello"
+    },
+    {
+        "text" : "잘 가 ~",
+        "intent" : "greetings.bye"
+    },
+    {
+        "text" : "바이바이",
+        "intent" : "greetings.bye"
+    },
+    {
+        "text" : "그래 내일 봐",
+        "intent" : "greetings.bye"
+    },
+    {
+        "text" : "시간 될 때 불러",
+        "intent" : "greetings.bye"
+    },
+    {
+        "text" : "나중에 연락해",
+        "intent" : "greetings.bye"
+    },
+    {
+        "text" : "뭐하고 놀래?",
+        "intent" : "boring"
+    },
+    {
+        "text" : "나도 심심해",
+        "intent" : "boring"
+    },
+    {
+        "text" : "할 거 있으려나...",
+        "intent" : "boring"
+    },
+    
+    {
+        "text" : "유튜브나 봐라",
+        "intent" : "boring"
+    },
+    {
+        "text" : "나도 배고파",
+        "intent" : "hungry"
+    },
+    {
+        "text" : "시켜먹을 거 없나 봐봐",
+        "intent" : "hungry"
+    }
+]
